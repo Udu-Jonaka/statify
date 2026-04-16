@@ -23,7 +23,7 @@ const Greeting = ({ name }) => {
   return (
     <div className="greetingContainer">
       <h1 className="greetingText">
-        {greeting}, <span className="greetingName">{displayName}</span>?
+        {greeting}, <span className="greetingName">{displayName}</span>
       </h1>
     </div>
   );
