@@ -5,7 +5,7 @@ import "./globals.css";
 import Providers from "@/components/Providers";
 
 export const metadata = {
-  title: "Spotify Stats",
+  title: "Statify",
   description: "Your personalized Spotify statistics dashboard",
 };
 

@@ -5,10 +5,9 @@ import "@/styles/components.css";
 
 const greetingsList = [
   "Welcome back",
-  "Vibing today",
-  "Ready for some tunes",
+  "Vibing today?",
   "Good to see you",
-  "Let's play some music",
+  "Let's see your music",
 ];
 
 const Greeting = ({ name }) => {
