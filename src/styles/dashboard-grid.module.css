@@ -22,9 +22,12 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+  .dashboardPage {
+    padding: 1rem;
+  }
   .grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 }

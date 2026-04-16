@@ -75,10 +75,15 @@
   font-size: 1rem;
   font-weight: 500;
   color: var(--color-text);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   margin-bottom: 4px;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.trackTitle::-webkit-scrollbar {
+  display: none;
 }
 
 /* Give hover accent on title */
@@ -90,8 +95,13 @@
   font-size: 0.875rem;
   color: var(--color-text-muted);
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.trackArtist::-webkit-scrollbar {
+  display: none;
 }
 
 .trackRow:hover .trackArtist {

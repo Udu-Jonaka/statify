@@ -22,5 +22,6 @@
   }
   .main {
     margin-left: 0;
+    padding-top: 5rem; /* Make room for absolute positioned hamburger toggle */
   }
 }

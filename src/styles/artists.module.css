@@ -74,12 +74,27 @@
   font-size: 1.125rem;
   margin-bottom: 4px;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.artistName::-webkit-scrollbar {
+  display: none;
 }
 
 .artistGenre {
   font-size: 0.875rem;
   color: var(--color-text-muted);
   text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  .artistGrid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1rem;
+  }
+  .artistName {
+    font-size: 1rem;
+  }
 }
