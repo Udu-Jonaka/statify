@@ -1,0 +1,115 @@
+/* src/styles/components.css */
+
+/* Track List styles */
+.trackList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.trackRow {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast);
+  cursor: pointer;
+}
+
+.trackRow:hover {
+  background-color: var(--color-surface-2);
+}
+
+.trackNumberContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trackNumber {
+  color: var(--color-text-subtle);
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.trackRow:hover .trackNumber {
+  display: none;
+}
+
+.trackPlayIcon {
+  display: none;
+  width: 16px;
+  height: 16px;
+  fill: var(--color-text);
+}
+
+.trackRow:hover .trackPlayIcon {
+  display: block;
+}
+
+.trackInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.trackImage {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  object-fit: cover;
+  background-color: var(--color-surface-3);
+}
+
+.trackDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  overflow: hidden;
+}
+
+.trackTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+/* Give hover accent on title */
+.trackRow:hover .trackTitle {
+  color: var(--color-gold);
+}
+
+.trackArtist {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trackRow:hover .trackArtist {
+  color: var(--color-text);
+}
+
+/* Greeting component styles */
+.greetingContainer {
+  margin-bottom: 2rem;
+}
+
+.greetingText {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.greetingName {
+  color: var(--color-gold);
+}

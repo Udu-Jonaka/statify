@@ -1,0 +1,95 @@
+/* src/styles/sidebar.css */
+
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: #000000; /* Distinct from deep black dashboard background */
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid var(--color-border);
+}
+
+.sidebarLogo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebarNav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.sidebarLink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.sidebarLink:hover {
+  color: var(--color-text);
+}
+
+.sidebarLink.active {
+  background-color: var(--color-surface-2);
+  color: var(--color-green);
+}
+
+.sidebarLink.active svg {
+  fill: var(--color-green);
+}
+
+.sidebarIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.sidebarFooter {
+  margin-top: auto;
+  border-top: 1px solid var(--color-border);
+  padding-top: 16px;
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.userAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.userStatus {
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+}

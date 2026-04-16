@@ -1,0 +1,178 @@
+.landing {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.noise {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.blob1 {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background-color: var(--color-green-glow);
+  filter: blur(100px);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.blob2 {
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  width: 40vw;
+  height: 40vw;
+  background-color: var(--color-gold-dim);
+  filter: blur(100px);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.nav {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.logoMark {
+  color: var(--color-green);
+}
+
+.navLink {
+  font-weight: 500;
+  color: var(--color-text-subtle);
+  transition: color var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--color-text);
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: var(--color-green);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.headline {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.accentGold {
+  color: var(--color-gold);
+}
+
+.accentGreen {
+  color: var(--color-green);
+}
+
+.subheadline {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.ctaButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--color-green);
+  color: #000;
+  padding: 1rem 2rem;
+  border-radius: 99px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition:
+    transform var(--transition-base),
+    background-color var(--transition-base);
+}
+
+.ctaButton:hover {
+  background-color: var(--color-green-dim);
+  transform: scale(1.05);
+}
+
+.spotifyIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.disclaimer {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: var(--color-text-subtle);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  z-index: 1;
+  background-color: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(20px);
+}
+
+.featureCard {
+  padding: 2rem;
+  background-color: var(--color-surface-2);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.featureIcon {
+  font-size: 2rem;
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.featureDesc {
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
