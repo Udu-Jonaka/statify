@@ -6,6 +6,7 @@ import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/Footer";
 import styles from "@/styles/dashboard-layout.module.css";
 
 export default async function DashboardLayout({ children }) {
@@ -22,6 +23,7 @@ export default async function DashboardLayout({ children }) {
       <Sidebar user={session.user} />
       <main className={styles.main}>
         <div className={styles.mainInner}>{children}</div>
+        <Footer />
       </main>
     </div>
   );

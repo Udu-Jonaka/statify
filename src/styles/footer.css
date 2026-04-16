@@ -1,0 +1,15 @@
+.appFooter {
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  border-top: 1px solid var(--color-border);
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Dashboard specific adjustments if needed */
+.main .appFooter {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: transparent;
+}

@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { signOut } from "next-auth/react";
 import {
   FaHeadphones,
   FaHome,
@@ -11,6 +12,7 @@ import {
   FaMicrophone,
   FaListOl,
   FaHistory,
+  FaSignOutAlt,
 } from "react-icons/fa";
 import "@/styles/sidebar.css";
 
@@ -71,6 +73,13 @@ const Sidebar = ({ user }) => {
               <span className="userName">{user.name || "Guest"}</span>
               <span className="userStatus">Online</span>
             </div>
+            <button
+              onClick={() => signOut({ callbackUrl: "/" })}
+              className="logoutButton"
+              title="Logout"
+            >
+              <FaSignOutAlt />
+            </button>
           </div>
         </div>
       )}
